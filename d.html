@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body,html,#app{
+        height: 2000px;
+    }
+    .wrappe11111 {
+        height: 200px;
+        color: #fff;
+        overflow: hidden;
+        background-color: yellow;
+    }
+
+    .content {
+        background-color: red;
+        overflow-y: scroll;
+    }
+
+    .eee {
+        width: 240px;
+    }
+
+    .a {
+        display: inline-block;
+        width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <p style="width: 300px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+            22222222222222222222222222222222222222222222222222222222222222222222</p>
+        <span class="a">22222222222222222222222222222222222222222222222222222222222222222222</span>
+        <button @click="aa">按钮</button>
+        <div class="wrappe11111" v-if="flag" ref="wrr">
+            <ul class="content">
+                <div>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li style="background-color: pink;">...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script src="https://unpkg.com/@better-scroll/core@latest/dist/core.js"></script>
+
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                flag: false
+            }
+        },
+        methods: {
+            aa() {
+                this.flag = !this.flag
+                this.$nextTick(_ => {
+                    console.log(this.$refs.wrr);
+                    this.scroll = new BScroll(this.$refs.wrr, {})
+
+                })
+            }
+        }
+    })
+</script>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body,html,#app{
+        height: 2000px;
+    }
+    .h{
+        height: 200px;
+        background-color: pink;
+    }
+    .c{
+        height: 1000px;
+        background-color: red;
+        overflow: hidden;
+    }
+    .c ul{
+        height: 100px;
+        background-color: yellow;
+        overflow-y: scroll;
+    }
+</style>
+<body>
+    <div class="h"></div>
+    <div class="c">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.querySelector('ul').addEventListener('scroll',e=>{
+        
+    })
+</script>
+</html>
